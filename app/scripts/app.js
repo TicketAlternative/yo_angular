@@ -7,6 +7,10 @@ angular.module('sampleAngularAppApp', [])
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/sampleroute', {
+        templateUrl: 'views/sampleroute.html',
+        controller: 'SamplerouteCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
