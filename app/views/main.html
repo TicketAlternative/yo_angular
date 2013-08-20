@@ -1,9 +1,39 @@
+<style>
+.hero-unit{width:800px;}
+</style>
+
+
+
 <div class="hero-unit">
-  <h1>'Allo, 'Allo!</h1>
-  <p>You now have</p>
-  <ul>
-      <li ng-repeat="thing in awesomeThings">{{thing}}</li>
-  </ul>
-  <p>installed.</p>
-  <h3>Enjoy coding! - Yeoman</h3>
+  <h1>2013 Home Game Dates</h1>
+<table border="1" class="table">
+<tbody>
+	<tr>
+		<th>Date</th>
+		<th>Game 1 | 5:00pm</th>
+		<th>Game 2 | 7:30pm</th>
+		<th>Doubleheader </th>
+	</tr>
+	<tr ng-repeat="episode in episodes">
+	<td>
+		{{episode.date}}
+	</td>
+	<td>
+		{{episode.game1name}}
+		<a href="www.ticket-singularity.com/buyticket?episode={{episode.id1}}" >Buy ticket</a>
+	</td>
+	<td>
+		{{episode.game2name}}
+		<a href="www.ticket-singularity.com/buyticket?episode={{episode.id1}}" >Buy ticket</a>
+	</td>
+	<td>
+		Doubleheader
+	</td>		
+
+	</tr>
+	
+</tbody>
+</table>
+
+
 </div>
